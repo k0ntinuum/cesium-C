@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-//#include <unistd.h>
+#include <unistd.h>
 #include <inttypes.h>
 typedef u_int32_t u32;
 typedef u_int64_t u64;
-const u32 N = 16;
-const u32 T = 32;
+const u32 N = 9;
+const u32 T = 34;
 const u32 B = 27;
-//char alph[] = "O|2";
-char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
+//char alph[] = "O| ";
+char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 #include"shuffle.c"
 #include"randomize.c"
 #include"key.c"
@@ -19,9 +19,12 @@ char alph[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 //#include"encrypt.c"
 #include"encryption_demo.c"
 #include"demo.c"
+#include"art.c"
 	
 int main() {
-	encoding_demo();
+	//encoding_demo();
 	//demo();
+	//art();
+	total_spin_demo();
 
 }

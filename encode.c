@@ -19,7 +19,7 @@ void reverse(u32 t[T]) {
     for (u32 i = 0; i < T; i++) t[i] = temp[T - 1 - i];
 }
 
-void encrypt(u32 c[T], u32 p[T], u32 k[N][N]) {
+void cesium_encrypt(u32 c[T], u32 p[T], u32 k[N][N]) {
 	u32 f[N][N] = {0};
 	u32 u[T] = {0};
 	u32 v[T] = {0};
@@ -33,7 +33,7 @@ void encrypt(u32 c[T], u32 p[T], u32 k[N][N]) {
 	}
 	copy_text(c,v);
 }
-void decrypt(u32 d[T], u32 c[T], u32 k[N][N]) {
+void cesium_decrypt(u32 d[T], u32 c[T], u32 k[N][N]) {
 	u32 f[N][N] = {0};
 	u32 u[T] = {0};
 	u32 v[T] = {0};

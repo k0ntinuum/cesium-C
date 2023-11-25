@@ -27,3 +27,13 @@ void auto_spin(u32 k[N][N], u32 j) {
             case 1 : shift_col(k, i, k[j][i] + 1);break;
     }
 }
+
+void total_spin(u32 k[N][N], int x) {
+	int r = x/N;
+	int c = x%N;
+	u32 p = k[r][c];
+	for (u32 i = 0 ; i < N ; i++) switch ((p +i )%2) {
+            case 0 : shift_row(k, i, k[i][i] + p + 1);break;
+            case 1 : shift_col(k, i, k[i][i] + p + 1);break;
+    }
+}

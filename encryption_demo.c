@@ -14,8 +14,8 @@ void encoding_demo(){
 	print_key(f);
 	for (u32 i = 0; i < 27; i++) {
 		randomize_text(p);
-		encrypt(c,p,f);
-        decrypt(d,c,f);
+		cesium_encrypt(c,p,f);
+        cesium_decrypt(d,c,f);
 		check_text_equality(d,p);
 		record_difference(e,p,c);
 		rgb(255,255,255);printf("f(");rgb(255,0,0);print_text(p);rgb(255,255,255);
